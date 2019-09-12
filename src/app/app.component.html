@@ -31,12 +31,12 @@
 
 <div class="content" role="main">
 
-  <!-- Navigation -->
+  <!-- Header Navigation -->
   <div class="ui-main ui-main__header">
-    <span class="ui-main__nav-logo"><img src="../assets/image/app-logo.svg"/></span>
+    <span><img class="ui-main__nav-logo" src="../assets/image/app-logo.svg"/></span>
     <nav class="ui-main__nav">
       <a class="ui-main__nav-link" routerLink="/account" routerLinkActive="active">Bank Account</a>
-      <a class="ui-main__nav-link">N26 You</a>
+      <a class="ui-main__nav-link">N26 You<span class="n26"></span></a>
       <a class="ui-main__nav-link">Metal</a>
       <a class="ui-main__nav-link">N26 Business</a>
       <a class="ui-main__nav-link">Compare Plans</a>
@@ -47,12 +47,20 @@
       </span>
     </nav>
     <div class="ui-main__custom-sw">
-        <a class="ui-main__nav-link">Online Banking</a>
+        <a class="ui-main__nav-link">Online Banking<img src="../../assets/image/ic-online-bk-btn.svg"/></a>
     </div>
   </div>
 
+  <!-- Main content -->
   <div class="ui-main">
       <router-outlet></router-outlet>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="ui-main ui-main__footer">
+      <p>© N26 GmbH / N26 Inc. 2019</p>
+    </div>
+  </footer>
 
 </div>

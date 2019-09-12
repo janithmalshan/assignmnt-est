@@ -8,6 +8,8 @@ body {
     background-color: #F5F5F5;
     overflow-x: hidden;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    color: #1b1b1b;
 }
 
 .no-margin {
@@ -18,4 +20,8 @@ body {
     padding: 0 !important;
 }
 
-c-both {}
+.t-center {
+    text-align: center;
+}
+
+.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
