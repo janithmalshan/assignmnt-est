@@ -32,11 +32,27 @@
 <div class="content" role="main">
 
   <!-- Navigation -->
-    <nav>
-    <span>{{ title }} app is running!</span>
-    <a routerLink="/account" routerLinkActive="active">Account</a>
-  </nav>
+  <div class="ui-main ui-main__header">
+    <span class="ui-main__nav-logo"><img src="../assets/image/app-logo.svg"/></span>
+    <nav class="ui-main__nav">
+      <a class="ui-main__nav-link" routerLink="/account" routerLinkActive="active">Bank Account</a>
+      <a class="ui-main__nav-link">N26 You</a>
+      <a class="ui-main__nav-link">Metal</a>
+      <a class="ui-main__nav-link">N26 Business</a>
+      <a class="ui-main__nav-link">Compare Plans</a>
+      <span class="ui-main__nav-lang">
+        <a class="ui-main__nav-link active">EN</a>
+        <a class="ui-main__nav-link">/</a>
+        <a class="ui-main__nav-link disable">DE</a>
+      </span>
+    </nav>
+    <div class="ui-main__custom-sw">
+        <a class="ui-main__nav-link">Online Banking</a>
+    </div>
+  </div>
+
+  <div class="ui-main">
+      <router-outlet></router-outlet>
+  </div>
 
 </div>
-
-<router-outlet></router-outlet>

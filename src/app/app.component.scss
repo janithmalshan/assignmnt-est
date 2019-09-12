@@ -1,0 +1,76 @@
+.ui-main {
+    width: 100%;
+    background-color: #F5F595;
+    &__header {        
+        height: 70px;
+        width: 100%;
+        padding: 0 40px;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    &__nav {
+        height: 30px;
+        width: 100%;
+        padding: 0 15px;
+        text-align: right;
+        margin-top: 5px;
+        &-logo {
+            width: 44px;
+            height: 30px;
+            background-color: #454545;
+        }
+        &-link {
+            font-size: 18px;
+            color: #292929;
+            padding: 0 18px 0 0;
+            margin: 0 5px;
+            text-decoration: none;
+            line-height: 30px;
+            &:hover {
+                color: #36a18b;
+                cursor: pointer;
+            }
+            &.active {
+                color: inherit;
+                &:hover {
+                    color: inherit;
+                    cursor: default;
+                }
+            }
+            &.disable {
+                color: #b6b6b6;
+                &:hover {
+                    color: #36a18b;
+                    cursor: pointer;
+                }
+            }
+        }
+        &-lang {
+            :first-child {
+                margin-right: 0;
+                padding-right: 0;
+            }
+            :nth-child(2) {      
+                padding-right: 0;
+                margin: 0 2px;
+            }
+            :last-child {
+                margin-left: 0;
+                padding-left: 0;
+            }
+        }
+    }
+    &__custom-sw {
+        width: 145px;
+        height: 140px;
+        background: #F5F595;
+        align-self: normal;
+        .ui-main__nav-link {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

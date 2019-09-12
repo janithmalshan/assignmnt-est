@@ -1,10 +1,12 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AccountComponent } from './account/account.component'
+import { MainComponent } from './main/main.component';
+import { AccountComponent } from './account/account.component';
 
 
 const routes: Routes = [
-  { path: 'account', component: AccountComponent }
+  { path: 'account', component: AccountComponent },
+  { path: 'main', component: MainComponent }
 ];
 
 @NgModule({
@@ -12,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [AccountComponent]
+export const routingComponents = [AccountComponent, MainComponent]

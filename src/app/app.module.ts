@@ -9,7 +9,7 @@ import { XyzComponent } from './xyz/xyz.component';
   declarations: [
     AppComponent,
     routingComponents,
-    XyzComponent
+    XyzComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+c-both {}
