@@ -142,6 +142,13 @@
             color: #747474;
             font-size: 13.5px;
             line-height: 21px;
+            >a {
+                text-decoration: underline;
+                cursor: pointer;
+                &:hover {
+                    color: #36a18b;
+                }
+            }
         }
     }
 }
