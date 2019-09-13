@@ -1,15 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
+
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
+
 
 @Component({
-  selector: 'app-xyz',
+  selector: 'content-box',
   templateUrl: './xyz.component.html',
-  styleUrls: ['./xyz.component.scss']
+  styleUrls: ['./xyz.component.scss'],
+  animations: [
+    trigger('scrollAnimation', [
+      state('show', style({
+        opacity: 1,
+        transform: "translateX(0)"
+      })),
+      state('hide',   style({
+        opacity: 0,
+        transform: "translateX(-100%)"
+      })),
+      transition('show => hide', animate('700ms ease-out')),
+      transition('hide => show', animate('700ms ease-in'))
+    ])
+  ]
 })
-export class XyzComponent implements OnInit {
+export class XyzComponent {
 
-  constructor() { }
+  state = 'hide'
 
-  ngOnInit() {
-  }
+  constructor(public el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+    checkScroll() {
+      const componentPosition = this.el.nativeElement.offsetTop
+      const scrollPosition = window.pageYOffset
+
+      if (scrollPosition >= componentPosition) {
+        this.state = 'show'
+      } else {
+        this.state = 'hide'
+      }
+
+    }
 
 }
