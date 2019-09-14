@@ -1,7 +1,8 @@
 .ui-main-content {
     &__banner-wr {
         text-align: center;
-        padding: 74px 0 42px;
+        padding: 74px 40px 42px;
+        box-sizing: border-box;
         .ui-title {
             font-size: 30.5px;
             font-weight: 600;
@@ -181,3 +182,30 @@
         }
     }
 }
+
+@media screen and (max-width: 940px) {
+    .ui-main-content__cards-wr, .ui-main-content__plans-wr {
+      zoom: 80%;
+    }
+  }
+
+@media screen and (max-width: 767px) {
+
+    .ui-main-content__cards-wr, .ui-main-content__plans-wr {
+        zoom: 1;
+        .ui-plan-wr, .ui-card-wr, .ui-card-wr__card {
+            display: block;
+            margin: 0 auto 40px;
+        }
+        .ui-plan-wr {
+            display: none;
+        }
+      }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }

@@ -95,3 +95,41 @@
         align-items: flex-end;
     }
 }
+
+@media screen and (max-width: 940px) {
+    .ui-main {
+        &__nav {
+            visibility: hidden;
+        }
+        &__custom-sw {
+            margin-right: 50px;
+            ::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                margin-right: -54px;
+                margin-top: -13px;
+                width: 40px;
+                height: 40px;
+                background-repeat: no-repeat;
+                background-image: url(https://cdn2.iconfinder.com/data/icons/4web-3/139/menu-512.png);
+                background-size: contain;
+                cursor: pointer;
+            }
+        }
+        &__footer {
+            height: 200px;
+        }
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .ui-main__nav {
+      display: none;
+      visibility: hidden;
+    }
+    .ui-main__custom-sw {
+      position: absolute;
+      right: 40px;
+    }
+  }
