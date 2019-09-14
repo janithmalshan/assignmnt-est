@@ -5,7 +5,7 @@ import { AccountComponent } from './account/account.component';
 
 
 const routes: Routes = [
-  { path: 'account', component: AccountComponent },
+  { path: 'account/:id', component: AccountComponent },
   { path: 'main', component: MainComponent }
 ];
 

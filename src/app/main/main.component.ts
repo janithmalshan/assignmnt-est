@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  accounts = [
+    {"id":1, "name": "n26"},
+    {"id":2, "name": "you"},
+    {"id":3, "name": "metal"} 
+  ]
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  }
+
+  onSelect(account){
+    this.router.navigate(['/account', account.id]);
   }
 
 }

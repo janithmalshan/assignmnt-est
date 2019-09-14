@@ -2,6 +2,8 @@
 
     <!-- Banner section -->
     <section class="ui-main-content__banner-wr">
+        <!-- <p (click)="onSelect(account)"
+        *ngFor="let account of accounts">{{account.name}}</p> -->
         <h1 class="ui-title">Find a plan that works for you.</h1>
         <h4><a class="ui-desc">Personal</a><a class="ui-desc">Business</a></h4>
     </section>
@@ -16,7 +18,7 @@
             <div class="ui-card-wr__card-switch t-center">
                 <button class="ui-card-switch a1"></button>
             </div>
-            <a class="ui-card-wr__card-btn" routerLink="/account">Open account</a>
+            <a class="ui-card-wr__card-btn" routerLink="/account/1">Open account</a>
         </div>
         <div class="ui-card-wr t-center">
             <h1 class="ui-card-wr__name">N26 You</h1>
@@ -30,7 +32,7 @@
                 <button class="ui-card-switch b4 active"></button>
                 <button class="ui-card-switch b5"></button>
             </div>
-            <a class="ui-card-wr__card-btn" routerLink="/account">Open account</a>
+            <a class="ui-card-wr__card-btn" routerLink="/account/2">Open account</a>
         </div>
         <div class="ui-card-wr t-center">
             <h1 class="ui-card-wr__name">N26 Metal</h1>
@@ -42,7 +44,7 @@
                 <button class="ui-card-switch c2"></button>
                 <button class="ui-card-switch c3"></button>
             </div>
-            <a class="ui-card-wr__card-btn" routerLink="/account">Open account</a>
+            <a class="ui-card-wr__card-btn" routerLink="/account/3">Open account</a>
         </div>
     </section>
 
